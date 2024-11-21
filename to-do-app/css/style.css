@@ -1,0 +1,269 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1, h2, p  {
+    margin: 0;
+}
+
+body { 
+    color: rgb(238, 230, 230);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif ;
+
+    min-height: 100vh;
+
+    background-image: linear-gradient(
+        to top ,
+        rgb(34, 27, 63),
+        rgb(17, 26, 59)
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.app {
+    width: 50rem;
+    height: 34rem;
+
+    border: 1px solid rgb(65, 79, 96);
+    background-color: rgb(30, 32, 35);
+    border-radius: .75rem;
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+ 
+aside, main {
+    padding: 1.25rem;
+}
+
+main {width: 66.666667%;
+    border-left: 1px solid rgb(48, 54, 84);
+    position: relative;
+
+}  
+
+.add-new {
+ display: flex;
+ justify-content: space-between;
+ position: relative;
+ top: -.3rem;
+
+}
+
+.header {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-size: 2.1rem;
+    text-align: left;
+    width: 62%;
+    margin-bottom: 1rem;
+    color: #646381;
+    border-bottom: 1px solid #646381;
+}
+
+.add-new button {
+    position: relative;
+    top: -2.7rem;
+    font-size: 1.5rem;
+    color: rgb(65, 79, 96);
+    background-color: rgb(30, 32, 35);
+    border: 1px solid rgb(65, 79, 96);
+    border-radius: .3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 0;
+
+}
+
+.add-new button:hover,
+.add-new button:active {
+	background: rgb(37, 43, 51);
+}
+
+
+input {
+    display: none;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-top: 1px solid rgb(73, 55, 81);
+	border-left: 1px solid rgb(73, 55, 81);
+	background: rgba(73, 69, 77, 0.4);
+	border-radius: 0.375rem;
+	width: 18rem;
+	padding: 0.5rem;
+
+}
+input:focus {
+    outline: none;
+    border: 2px solid #675c6a;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: normal;
+
+}
+        
+aside {
+    position: relative;
+}
+
+.title {
+    position: relative;
+    top: .3rem;
+    margin-bottom: 2.3rem;
+}
+
+h2.to-do {
+    position: relative;
+    top: 1rem;
+    font-size: 1.7rem;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    margin-left: .3rem;
+	color: #816b91;
+    display: block;
+}
+
+
+
+.todos {
+    margin: 0;
+    padding: 0;
+}
+
+.todos li {
+    display: flex;
+    line-height: 1.6;
+    gap: 1rem;
+    margin-bottom: .2rem;
+    margin-left: .3rem;
+}
+
+.todos p {
+    padding: none;
+    margin: none;
+    color: rgb(119, 116, 147);
+    border-bottom: 1px solid rgb(66, 63, 95);
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 200;
+    width: 100%;
+}
+.todos svg {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    stroke: rgb(31, 30, 30);
+    stroke-width: 1;
+
+    fill: rgb(63, 75, 95);
+}
+
+.todos path {
+    display: none;
+}
+
+.todos li:hover path {
+    display: block;
+    stroke: #9818cf;
+}
+
+
+
+.todos svg:hover,
+.todos svg:active {
+    fill: #c09fe0;
+    cursor: pointer;
+}
+
+
+.remove {
+    all: unset;
+    cursor: pointer;
+    font-size: .7rem;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    color: #c898c3;
+}
+
+[contenteditable="true"]:focus {
+    outline: none;
+    border-bottom: 1px solid #370a43;
+}
+
+
+
+aside {
+	background: rgb(42, 44, 47);
+	width: 33.33333%;
+}
+
+h3 {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: .7rem;
+    color: #9d7299;
+}
+
+.succes-list {
+    margin: 0;
+    margin-top: .7rem;
+    margin-left: .3rem;
+    padding: 0;
+    list-style: none;
+}
+
+.succes-list li  {
+    color: #9694a3;
+    margin-top: .3rem;
+    border-bottom: 1px solid rgb(77, 59, 86);
+    padding: .1rem;
+    font-size: .95rem;
+ }
+
+.counter-container {
+    width: max-content;
+    position: absolute;
+    bottom: 0;
+    right: 19px;
+    display: flex;
+    flex-direction: row;
+}
+
+.counter-container p:first-child {
+    color: #816b91;
+    margin-right: .7rem;
+
+}
+
+.counter-container p {
+    width: max-content;
+    color: #9d7299;
+}
+
+.counter-container span {
+    color: #9694a3;
+    font-size: .9rem;
+}
+
+
+.clear-all {
+    all: unset;
+    color: #646381;
+    cursor: pointer;
+    font-size: .9rem;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pripomienky-App</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    
+    <div class="app">
+    
+    <aside>
+        <h3 class="aside-heading">All Done</h3>
+
+        <ul class="succes-list">
+ 
+        </ul>
+
+        <button class="clear-all">Clear</button>
+    </aside>
+
+    <main>
+        <h1 class="header">Reminders Buddy</h1>
+
+        <header class="add-new">
+            <form>
+                <input type="text" placeholder="">
+            </form>
+            <button>+</button>
+        </header>
+
+     
+        <div class="title">
+            <h2 class="to-do">To Do List</h2>
+        </div>
+
+        <ol class="todos">
+            <template id="to-do-template">
+                <li class="li-to-do">
+                    <svg>
+                        <circle cx="13" cy="14" r="11" ></circle>
+                        <path d="M10 14 L13 17 L18 10" fill="none" stroke="black" stroke-width="1"></path>
+                    </svg>
+                    <p contenteditable="true"></p>
+                    <button class="remove">Remove</button>
+                </li>
+            </template>
+
+        <div class="counter-container">
+            <p>To Do List: <span class="to-do-count">0</span></p>
+            <p>All Done:  <span class="all-done-count" >0</span></p>
+        </div>
+    </main>
+       
+    </div>
+    
+</body>
+</html>
